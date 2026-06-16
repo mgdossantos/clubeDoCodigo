@@ -12,9 +12,9 @@
     --preto: #0f0e0d;
     --creme: #f5f0e8;
     --creme2: #ede7d9;
-    --verde: #2d6a4f;
-    --verde-claro: #52b788;
-    --verde-menta: #d8f3dc;
+    --verde: #b5451b;
+    --verde-claro: #f4a261;
+    --verde-menta: #fdecd6;
     --acento: #b5451b;
     --acento-claro: #f4a261;
     --cinza: #6b6560;
@@ -22,9 +22,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--creme);
@@ -34,7 +32,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: var(--creme);
@@ -43,17 +40,10 @@
     display: flex; align-items: center; justify-content: space-between;
     height: 56px;
   }
-  .nav-logo {
-    font-family: 'Fraunces', serif;
-    font-size: 15px; font-weight: 400;
-    letter-spacing: 0.02em;
-  }
+  .nav-logo { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 400; letter-spacing: 0.02em; }
   .nav-logo span { color: var(--verde); }
   .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    font-size: 13px; color: var(--cinza); text-decoration: none;
-    transition: color 0.2s;
-  }
+  .nav-links a { font-size: 13px; color: var(--cinza); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--preto); }
   .nav-cta {
     background: var(--preto); color: var(--creme) !important;
@@ -61,13 +51,11 @@
     font-size: 13px !important; font-weight: 500;
     transition: background 0.2s !important;
   }
-  .nav-cta:hover { background: var(--verde) !important; color: var(--creme) !important; }
+  .nav-cta:hover { background: var(--verde) !important; }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid; grid-template-columns: 1fr 1fr;
     padding-top: 56px;
   }
   .hero-esq {
@@ -81,28 +69,15 @@
     margin-bottom: 1.5rem;
     display: flex; align-items: center; gap: 8px;
   }
-  .hero-tag::before {
-    content: '';
-    display: inline-block; width: 24px; height: 1px;
-    background: var(--verde);
-  }
+  .hero-tag::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--verde); }
   .hero-titulo {
     font-family: 'Fraunces', serif;
     font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-weight: 300; line-height: 1.05; letter-spacing: -0.02em;
     margin-bottom: 1.5rem;
   }
-  .hero-titulo em {
-    font-style: italic;
-    color: var(--verde);
-  }
-  .hero-sub {
-    font-size: 17px; color: var(--cinza);
-    line-height: 1.65; max-width: 420px;
-    margin-bottom: 2.5rem;
-  }
+  .hero-titulo em { font-style: italic; color: var(--verde); }
+  .hero-sub { font-size: 17px; color: var(--cinza); line-height: 1.65; max-width: 420px; margin-bottom: 2.5rem; }
   .hero-sub strong { color: var(--preto); font-weight: 500; }
   .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn-pri {
@@ -126,45 +101,26 @@
 
   .hero-dir {
     display: flex; flex-direction: column; justify-content: center;
-    padding: 6rem 4rem;
-    gap: 1.5rem;
+    padding: 6rem 4rem; gap: 1.5rem;
     background: var(--creme2);
   }
-  .hero-preco-card {
-    background: var(--preto); color: var(--creme);
-    border-radius: 16px; padding: 2rem;
-  }
+  .hero-preco-card { background: var(--preto); color: var(--creme); border-radius: 16px; padding: 2rem; }
   .preco-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5; margin-bottom: 0.5rem; }
-  .preco-valor {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem; font-weight: 300; line-height: 1;
-    margin-bottom: 4px;
-  }
+  .preco-valor { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 300; line-height: 1; margin-bottom: 4px; }
   .preco-valor span { font-size: 1.2rem; opacity: 0.6; }
   .preco-sub { font-size: 13px; opacity: 0.5; margin-bottom: 1.5rem; }
   .preco-lista { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .preco-lista li {
-    font-size: 13px; opacity: 0.85;
-    display: flex; align-items: flex-start; gap: 8px;
-  }
+  .preco-lista li { font-size: 13px; opacity: 0.85; display: flex; align-items: flex-start; gap: 8px; }
   .preco-lista li::before { content: '✓'; color: var(--verde-claro); flex-shrink: 0; }
 
   .hero-stats {
     display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-    background: var(--linha); border: 1px solid var(--linha); border-radius: 12px;
-    overflow: hidden;
+    background: var(--linha); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden;
   }
-  .stat {
-    background: var(--creme); padding: 1.25rem;
-    display: flex; flex-direction: column; gap: 4px;
-  }
-  .stat-num {
-    font-family: 'Fraunces', serif;
-    font-size: 1.8rem; font-weight: 300; color: var(--verde);
-  }
+  .stat { background: var(--creme); padding: 1.25rem; display: flex; flex-direction: column; gap: 4px; }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 300; color: var(--verde); }
   .stat-txt { font-size: 12px; color: var(--cinza); }
 
-  /* SEÇÃO GENÉRICA */
   section { padding: 6rem 6rem; }
   .secao-label {
     font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
@@ -172,163 +128,106 @@
     margin-bottom: 1.5rem;
     display: flex; align-items: center; gap: 8px;
   }
-  .secao-label::before {
-    content: '';
-    display: inline-block; width: 24px; height: 1px;
-    background: var(--verde);
-  }
+  .secao-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--verde); }
   .secao-titulo {
     font-family: 'Fraunces', serif;
     font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 300; line-height: 1.15;
-    letter-spacing: -0.02em;
+    font-weight: 300; line-height: 1.15; letter-spacing: -0.02em;
     margin-bottom: 1rem;
   }
   .secao-titulo em { font-style: italic; color: var(--verde); }
-  .secao-sub {
-    font-size: 17px; color: var(--cinza);
-    max-width: 580px; line-height: 1.65;
-  }
+  .secao-sub { font-size: 17px; color: var(--cinza); max-width: 580px; line-height: 1.65; }
 
-  /* PARA QUEM */
   #para-quem { background: var(--creme); border-top: 1px solid var(--linha); }
   .para-quem-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
     background: var(--linha);
-    border: 1px solid var(--linha); border-radius: 16px;
-    overflow: hidden; margin-top: 3rem;
+    border: 1px solid var(--linha); border-radius: 16px; overflow: hidden; margin-top: 3rem;
   }
-  .pq-card {
-    background: var(--creme); padding: 2rem;
-    transition: background 0.2s;
-  }
+  .pq-card { background: var(--creme); padding: 2rem; transition: background 0.2s; }
   .pq-card:hover { background: var(--verde-menta); }
   .pq-icone { font-size: 1.5rem; margin-bottom: 1rem; }
   .pq-titulo { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; }
   .pq-texto { font-size: 13px; color: var(--cinza); line-height: 1.6; }
 
-  /* COMO FUNCIONA */
   #como-funciona { background: var(--creme2); border-top: 1px solid var(--linha); }
   .semana-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
     background: var(--linha);
-    border: 1px solid var(--linha); border-radius: 16px;
-    overflow: hidden; margin-top: 3rem;
+    border: 1px solid var(--linha); border-radius: 16px; overflow: hidden; margin-top: 3rem;
   }
-  .semana-card {
-    background: var(--creme); padding: 1.75rem;
-    position: relative;
-  }
+  .semana-card { background: var(--creme); padding: 1.75rem; position: relative; }
   .semana-num {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem; font-weight: 300;
-    color: var(--linha); line-height: 1;
-    margin-bottom: 1rem;
+    font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 300; line-height: 1; margin-bottom: 1rem;
     background: linear-gradient(135deg, var(--verde-claro), var(--verde));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   }
   .semana-titulo { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; }
   .semana-texto { font-size: 13px; color: var(--cinza); line-height: 1.6; }
   .semana-badge {
     display: inline-block; margin-top: 1rem;
     font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
-    text-transform: uppercase; padding: 4px 10px;
-    border-radius: 100px;
+    text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
   }
   .badge-live { background: var(--verde-menta); color: var(--verde); }
   .badge-async { background: #fdecd6; color: #92400e; }
   .badge-ritual { background: #e0e7ff; color: #3730a3; }
 
-  /* CURADORIA */
   #curadoria { border-top: 1px solid var(--linha); }
   .curadoria-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
   .curadoria-texto p { font-size: 15px; color: var(--cinza); line-height: 1.7; margin-bottom: 1.5rem; }
   .curadoria-cards { display: flex; flex-direction: column; gap: 12px; }
   .cur-card {
-    background: var(--creme2);
-    border: 1px solid var(--linha); border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--creme2); border: 1px solid var(--linha); border-radius: 12px;
+    padding: 1.25rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
   }
   .cur-icone {
-    width: 36px; height: 36px; border-radius: 8px;
-    background: var(--verde-menta);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem; flex-shrink: 0;
+    width: 36px; height: 36px; border-radius: 8px; background: var(--verde-menta);
+    display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;
   }
   .cur-titulo { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
   .cur-texto { font-size: 13px; color: var(--cinza); line-height: 1.5; }
 
-  /* DEPOIMENTOS */
   #depoimentos { background: var(--preto); color: var(--creme); border-top: 1px solid var(--linha); }
   #depoimentos .secao-label { color: var(--verde-claro); }
   #depoimentos .secao-label::before { background: var(--verde-claro); }
   #depoimentos .secao-titulo em { color: var(--verde-claro); }
   .dep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .dep-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px; padding: 2rem;
   }
-  .dep-aspas {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem; line-height: 0.5;
-    color: var(--verde-claro); margin-bottom: 1.25rem;
-    display: block;
-  }
+  .dep-aspas { font-family: 'Fraunces', serif; font-size: 3rem; line-height: 0.5; color: var(--verde-claro); margin-bottom: 1.25rem; display: block; }
   .dep-texto { font-size: 14px; line-height: 1.7; opacity: 0.8; margin-bottom: 1.5rem; }
   .dep-nome { font-size: 13px; font-weight: 500; }
   .dep-cargo { font-size: 12px; opacity: 0.45; }
 
-  /* PROFESSORA */
   #professora { border-top: 1px solid var(--linha); }
   .prof-layout { display: grid; grid-template-columns: auto 1fr; gap: 2rem; margin-top: 3rem; align-items: center; }
   .prof-foto-wrap {
-    max-width: 280px; aspect-ratio: 3/4;
-    background: var(--verde-menta);
-    border-radius: 16px; overflow: hidden;
-    position: relative;
+    max-width: 280px; aspect-ratio: 3/4; background: var(--verde-menta);
+    border-radius: 16px; overflow: hidden; position: relative;
   }
   .prof-foto-wrap img { width: 100%; height: 100%; object-fit: cover; }
   .prof-foto-placeholder {
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Fraunces', serif;
-    font-size: 6rem; color: var(--verde); opacity: 0.3;
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-size: 6rem; color: var(--verde); opacity: 0.3;
   }
-  .prof-nome {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--cinza);
-    margin-bottom: 0.75rem;
-  }
-  .prof-titulo {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-    font-weight: 300; line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
+  .prof-nome { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cinza); margin-bottom: 0.75rem; }
+  .prof-titulo { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; }
   .prof-titulo em { font-style: italic; color: var(--verde); }
   .prof-bio { font-size: 15px; color: var(--cinza); line-height: 1.7; margin-bottom: 2rem; }
   .prof-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .prof-tag {
-    background: var(--creme2); border: 1px solid var(--linha);
-    border-radius: 100px; padding: 6px 14px;
-    font-size: 12px; color: var(--cinza);
-  }
+  .prof-tag { background: var(--creme2); border: 1px solid var(--linha); border-radius: 100px; padding: 6px 14px; font-size: 12px; color: var(--cinza); }
 
-  /* FAQ */
   #faq { background: var(--creme2); border-top: 1px solid var(--linha); }
   .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; margin-top: 3rem; }
   .faq-intro { font-size: 15px; color: var(--cinza); line-height: 1.7; }
   .faq-lista { display: flex; flex-direction: column; }
   .faq-item { border-bottom: 1px solid var(--linha); }
   .faq-pergunta {
-    width: 100%; background: none; border: none;
-    text-align: left; cursor: pointer;
-    padding: 1.25rem 0;
-    font-family: 'DM Sans', sans-serif;
+    width: 100%; background: none; border: none; text-align: left; cursor: pointer;
+    padding: 1.25rem 0; font-family: 'DM Sans', sans-serif;
     font-size: 15px; font-weight: 500; color: var(--preto);
     display: flex; justify-content: space-between; align-items: center; gap: 1rem;
     transition: color 0.2s;
@@ -343,13 +242,7 @@
   }
   .faq-item.aberto .faq-resposta { max-height: 300px; padding-bottom: 1.25rem; }
 
-  /* CTA FINAL */
-  #cta-final {
-    background: var(--verde);
-    color: var(--creme);
-    text-align: center;
-    border-top: 1px solid var(--linha);
-  }
+  #cta-final { background: var(--verde); color: var(--creme); text-align: center; border-top: 1px solid var(--linha); }
   #cta-final .secao-label { color: var(--verde-claro); justify-content: center; }
   #cta-final .secao-label::before { background: var(--verde-claro); }
   #cta-final .secao-titulo { color: var(--creme); margin: 0 auto 1rem; }
@@ -357,15 +250,10 @@
   #cta-final .secao-sub { color: rgba(245,240,232,0.75); margin: 0 auto 2.5rem; }
   .cta-preco-box {
     display: inline-flex; align-items: center; gap: 1rem;
-    background: rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 16px; padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
+    background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px; padding: 1.5rem 2rem; margin-bottom: 2rem;
   }
-  .cta-preco-num {
-    font-family: 'Fraunces', serif;
-    font-size: 2.5rem; font-weight: 300; color: var(--creme);
-  }
+  .cta-preco-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--creme); }
   .cta-preco-det { text-align: left; font-size: 13px; color: rgba(245,240,232,0.6); }
   .btn-cta-final {
     background: var(--creme); color: var(--verde);
@@ -376,7 +264,6 @@
   }
   .btn-cta-final:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
 
-  /* FOOTER */
   footer {
     background: var(--preto); color: var(--creme);
     padding: 2rem 6rem;
@@ -387,7 +274,6 @@
   footer a:hover { color: var(--verde-claro); }
   .footer-links { display: flex; gap: 1.5rem; }
 
-  /* ANIMAÇÕES */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -397,7 +283,6 @@
   .delay-2 { animation-delay: 0.25s; opacity: 0; }
   .delay-3 { animation-delay: 0.4s; opacity: 0; }
 
-  /* RESPONSIVO */
   @media (max-width: 900px) {
     nav { padding: 0 1.5rem; }
     .nav-links { display: none; }
@@ -429,7 +314,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="topo">
   <div class="hero-esq">
     <div class="hero-tag fade-up">Comunidade · Assinatura mensal</div>
@@ -461,66 +345,28 @@
       </ul>
     </div>
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">3+1</div>
-        <div class="stat-txt">lives por mês — projeto + dúvidas</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">1h</div>
-        <div class="stat-txt">por live, sem enrolação</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">14+</div>
-        <div class="stat-txt">anos ensinando programação</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">∞</div>
-        <div class="stat-txt">temas — você vota</div>
-      </div>
+      <div class="stat"><div class="stat-num">3+1</div><div class="stat-txt">lives por mês — projeto + dúvidas</div></div>
+      <div class="stat"><div class="stat-num">1h</div><div class="stat-txt">por live, sem enrolação</div></div>
+      <div class="stat"><div class="stat-num">14+</div><div class="stat-txt">anos ensinando programação</div></div>
+      <div class="stat"><div class="stat-num">∞</div><div class="stat-txt">temas — você vota</div></div>
     </div>
   </div>
 </section>
 
-<!-- PARA QUEM -->
 <section id="para-quem">
   <div class="secao-label">para quem é</div>
   <h2 class="secao-titulo">Para você que está<br><em>no meio da jornada.</em></h2>
   <p class="secao-sub">Não importa se você está estudando dados, automação, lógica ou qualquer outra área de programação. O clube é para todas.</p>
   <div class="para-quem-grid">
-    <div class="pq-card">
-      <div class="pq-icone">🔄</div>
-      <div class="pq-titulo">Está em transição de carreira</div>
-      <div class="pq-texto">Trabalhou em outra área e quer entrar em tecnologia. Precisa de prática constante, não só de curso.</div>
-    </div>
-    <div class="pq-card">
-      <div class="pq-icone">📚</div>
-      <div class="pq-titulo">Está estudando sozinha e quer companhia</div>
-      <div class="pq-texto">Conteúdo na internet não falta. Mas ver alguém construindo ao vivo e poder fazer perguntas é diferente.</div>
-    </div>
-    <div class="pq-card">
-      <div class="pq-icone">💡</div>
-      <div class="pq-titulo">Fez um curso mas quer continuar praticando</div>
-      <div class="pq-texto">Terminou o básico ou análise de dados e quer manter o ritmo sem começar um novo curso do zero.</div>
-    </div>
-    <div class="pq-card">
-      <div class="pq-icone">⏰</div>
-      <div class="pq-titulo">Tem vida intensa mas quer consistência</div>
-      <div class="pq-texto">1h por semana ao vivo. O resto você assiste quando puder. Feito para quem tem trabalho, filhos e rotina cheia.</div>
-    </div>
-    <div class="pq-card">
-      <div class="pq-icone">🐍</div>
-      <div class="pq-titulo">Está aprendendo qualquer área de tech</div>
-      <div class="pq-texto">Dados, automação, lógica, web scraping — o projeto da semana muda. Você vota no que quer ver.</div>
-    </div>
-    <div class="pq-card">
-      <div class="pq-icone">🤝</div>
-      <div class="pq-titulo">Quer uma comunidade que entende você</div>
-      <div class="pq-texto">Mulheres 30+ em transição, no mesmo ponto da jornada. Sem julgamento, sem síndrome da impostora solitária.</div>
-    </div>
+    <div class="pq-card"><div class="pq-icone">🔄</div><div class="pq-titulo">Está em transição de carreira</div><div class="pq-texto">Trabalhou em outra área e quer entrar em tecnologia. Precisa de prática constante, não só de curso.</div></div>
+    <div class="pq-card"><div class="pq-icone">📚</div><div class="pq-titulo">Está estudando sozinha e quer companhia</div><div class="pq-texto">Conteúdo na internet não falta. Mas ver alguém construindo ao vivo e poder fazer perguntas é diferente.</div></div>
+    <div class="pq-card"><div class="pq-icone">💡</div><div class="pq-titulo">Fez um curso mas quer continuar praticando</div><div class="pq-texto">Terminou o básico ou análise de dados e quer manter o ritmo sem começar um novo curso do zero.</div></div>
+    <div class="pq-card"><div class="pq-icone">⏰</div><div class="pq-titulo">Tem vida intensa mas quer consistência</div><div class="pq-texto">1h por semana ao vivo. O resto você assiste quando puder. Feito para quem tem trabalho, filhos e rotina cheia.</div></div>
+    <div class="pq-card"><div class="pq-icone">🐍</div><div class="pq-titulo">Está aprendendo qualquer área de tech</div><div class="pq-texto">Dados, automação, lógica, web scraping — o projeto da semana muda. Você vota no que quer ver.</div></div>
+    <div class="pq-card"><div class="pq-icone">🤝</div><div class="pq-titulo">Quer uma comunidade que entende você</div><div class="pq-texto">Mulheres 30+ em transição, no mesmo ponto da jornada. Sem julgamento, sem síndrome da impostora solitária.</div></div>
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
 <section id="como-funciona">
   <div class="secao-label">como funciona</div>
   <h2 class="secao-titulo">Um <em>ritual semanal</em><br>que cria o hábito.</h2>
@@ -551,13 +397,12 @@
       <span class="semana-badge badge-ritual">você decide</span>
     </div>
   </div>
-  <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--verde-menta); border-radius: 12px; border: 1px solid rgba(45,106,79,0.15);">
-    <p style="font-size: 14px; color: var(--verde); font-weight: 500; margin-bottom: 4px;">Cada projeto é completo em 1h.</p>
-    <p style="font-size: 13px; color: var(--cinza);">Você pode entrar no clube em qualquer semana sem se sentir perdida. Não tem "episódio anterior". Cada live de projeto é completa em si mesma. E quem não conseguiu assistir ao vivo pega pela gravação e chega na live de tira-dúvidas preparada.</p>
+  <div style="margin-top:2rem;padding:1.5rem 2rem;background:var(--verde-menta);border-radius:12px;border:1px solid rgba(181,69,27,0.15);">
+    <p style="font-size:14px;color:var(--verde);font-weight:500;margin-bottom:4px;">Cada projeto é completo em 1h.</p>
+    <p style="font-size:13px;color:var(--cinza);">Você pode entrar no clube em qualquer semana sem se sentir perdida. Não tem "episódio anterior". Cada live de projeto é completa em si mesma. E quem não conseguiu assistir ao vivo pega pela gravação e chega na live de tira-dúvidas preparada.</p>
   </div>
 </section>
 
-<!-- CURADORIA -->
 <section id="curadoria">
   <div class="curadoria-layout">
     <div class="curadoria-texto">
@@ -567,39 +412,14 @@
       <p>Inspirado nos clubes do livro: a curadoria é o que faz a experiência durar a semana inteira, não só 1h.</p>
     </div>
     <div class="curadoria-cards">
-      <div class="cur-card">
-        <div class="cur-icone">📌</div>
-        <div>
-          <div class="cur-titulo">Antes da live — contexto</div>
-          <div class="cur-texto">1 link ou vídeo curto (10 min) relacionado ao projeto da semana. Para chegar na live com o tema na cabeça.</div>
-        </div>
-      </div>
-      <div class="cur-card">
-        <div class="cur-icone">📚</div>
-        <div>
-          <div class="cur-titulo">Depois da live — aprofundamento</div>
-          <div class="cur-texto">2–3 recursos para quem quer ir além. Documentação, artigo, vídeo complementar. Postado no Discord logo após a live.</div>
-        </div>
-      </div>
-      <div class="cur-card">
-        <div class="cur-icone">🗓</div>
-        <div>
-          <div class="cur-titulo">Lista mensal — o melhor do mês</div>
-          <div class="cur-texto">Uma lista com os materiais mais relevantes do mês — ferramentas, artigos, pessoas para seguir na área tech.</div>
-        </div>
-      </div>
-      <div class="cur-card">
-        <div class="cur-icone">💬</div>
-        <div>
-          <div class="cur-titulo">Comunidade no Discord</div>
-          <div class="cur-texto">Canais organizados: #boas-vindas, #votação, #dúvidas, #projetos, #curadoria. O clube vive entre os encontros.</div>
-        </div>
-      </div>
+      <div class="cur-card"><div class="cur-icone">📌</div><div><div class="cur-titulo">Antes da live — contexto</div><div class="cur-texto">1 link ou vídeo curto (10 min) relacionado ao projeto da semana. Para chegar na live com o tema na cabeça.</div></div></div>
+      <div class="cur-card"><div class="cur-icone">📚</div><div><div class="cur-titulo">Depois da live — aprofundamento</div><div class="cur-texto">2–3 recursos para quem quer ir além. Documentação, artigo, vídeo complementar. Postado no Discord logo após a live.</div></div></div>
+      <div class="cur-card"><div class="cur-icone">🗓</div><div><div class="cur-titulo">Lista mensal — o melhor do mês</div><div class="cur-texto">Uma lista com os materiais mais relevantes do mês — ferramentas, artigos, pessoas para seguir na área tech.</div></div></div>
+      <div class="cur-card"><div class="cur-icone">💬</div><div><div class="cur-titulo">Comunidade no Discord</div><div class="cur-texto">Canais organizados: #boas-vindas, #votação, #dúvidas, #projetos, #curadoria. O clube vive entre os encontros.</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
 <section id="depoimentos">
   <div class="secao-label">o que dizem</div>
   <h2 class="secao-titulo">Quem já estudou<br><em>com a Marcela.</em></h2>
@@ -607,29 +427,25 @@
     <div class="dep-card">
       <span class="dep-aspas">"</span>
       <p class="dep-texto">As aulas com a Marcela são dinâmicas e os resultados você vê já no primeiro dia de aula. Ela não deixa a gente sair com dúvidas sobre o conteúdo do dia.</p>
-      <div class="dep-nome">Juliana Motta</div>
-      <div class="dep-cargo">Aluna · Projeto Girls on Firewalls</div>
+      <div class="dep-nome">Juliana Motta</div><div class="dep-cargo">Aluna · Projeto Girls on Firewalls</div>
     </div>
     <div class="dep-card">
       <span class="dep-aspas">"</span>
       <p class="dep-texto">As aulas vão além de ensinar a escrever linhas de código. Ela aborda lógica de programação para que os alunos entendam o "porquê" do que está sendo feito. É sempre maravilhoso ver mulheres na área de TI comprometidas em atrair mais mulheres.</p>
-      <div class="dep-nome">Ray</div>
-      <div class="dep-cargo">Aluna · Projeto Girls on Firewalls</div>
+      <div class="dep-nome">Ray</div><div class="dep-cargo">Aluna · Projeto Girls on Firewalls</div>
     </div>
     <div class="dep-card">
       <span class="dep-aspas">"</span>
       <p class="dep-texto">Ela consegue explicar conteúdos difíceis de forma simples, clara e com paciência, o que me ajudou muito a ganhar mais confiança. Suas aulas são leves, motivadoras e fazem com que aprender Python seja algo tranquilo.</p>
-      <div class="dep-nome">Thaís Brandão</div>
-      <div class="dep-cargo">Aluna · Projeto Girls on Firewalls</div>
+      <div class="dep-nome">Thaís Brandão</div><div class="dep-cargo">Aluna · Projeto Girls on Firewalls</div>
     </div>
   </div>
 </section>
 
-<!-- PROFESSORA -->
 <section id="professora">
   <div class="prof-layout">
     <div class="prof-foto-wrap">
-      <img src="https://mgdossantos.github.io/tutoriaPython-LP/images/marcela.png" alt="Marcela dos Santos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <img src="https://mgdossantos.github.io/tutoriaPython-LP/images/marcela.png" alt="Marcela dos Santos" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="prof-foto-placeholder" style="display:none">M</div>
     </div>
     <div>
@@ -648,89 +464,43 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
   <div class="faq-layout">
     <div>
       <div class="secao-label">dúvidas</div>
       <h2 class="secao-titulo">Perguntas<br><em>frequentes.</em></h2>
-      <p class="faq-intro">Algo não ficou claro? Manda mensagem no Instagram — <a href="https://www.instagram.com/marceladossantos.prof/" target="_blank" style="color: var(--verde); text-decoration: none;">@marceladossantos.prof</a></p>
+      <p class="faq-intro">Algo não ficou claro? Manda mensagem no Instagram — <a href="https://www.instagram.com/marceladossantos.prof/" target="_blank" style="color:var(--verde);text-decoration:none;">@marceladossantos.prof</a></p>
     </div>
     <div class="faq-lista">
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Preciso saber programar para entrar no clube?
-          <span class="faq-seta">+</span>
-        </button>
-        <div class="faq-resposta">O clube é para quem já está estudando programação em algum nível — não precisa ser avançada, mas é ideal que você já tenha algum contato com código. Se você está começando do absoluto zero, o Curso Básico pode ser um passo anterior antes de entrar no clube.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Em que linguagem são os projetos?
-          <span class="faq-seta">+</span>
-        </button>
-        <div class="faq-resposta">Python é a linguagem principal, mas o foco é no raciocínio e na lógica — que valem para qualquer linguagem. Quem está aprendendo dados, automação ou lógica vai reconhecer o pensamento independentemente de onde está na jornada.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          E se eu não conseguir assistir ao vivo?
-          <span class="faq-seta">+</span>
-        </button>
-        <div class="faq-resposta">Sem problema. Todas as lives ficam gravadas e disponíveis no Discord logo após o encontro. Você assiste quando puder, pratica no seu ritmo, e traz as dúvidas para a live de tira-dúvidas do mês.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Como funciona a votação dos projetos?
-          <span class="faq-seta">+</span>
-        </button>
-        <div class="faq-resposta">No fim de cada mês, a Marcela apresenta duas opções de temática para o mês seguinte — pode ser automação, análise de dados, web scraping, lógica, qualquer coisa. As membras do clube votam no Discord e a maioria decide. É a sua assinatura moldando o clube.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Posso cancelar quando quiser?
-          <span class="faq-seta">+</span>
-        </button>
-        <div class="faq-resposta">Sim. O clube é uma assinatura mensal recorrente — você cancela quando quiser, sem burocracia, diretamente pela Hotmart.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-pergunta" onclick="toggleFaq(this)">
-          Por que Discord e não WhatsApp?
-          <span class="faq-seta">+</span>
-        </button>
-        <div class="faq-resposta">Porque comunidades de tecnologia vivem no Discord — e aprender a usar o Discord faz parte da sua transição de carreira. Tem canais organizados por tema, histórico permanente e funciona muito melhor para uma comunidade tech ativa. Criamos um tutorial de onboarding para que a entrada seja tranquila.</div>
-      </div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso saber programar para entrar no clube?<span class="faq-seta">+</span></button><div class="faq-resposta">O clube é para quem já está estudando programação em algum nível — não precisa ser avançada, mas é ideal que você já tenha algum contato com código. Se você está começando do absoluto zero, o Curso Básico pode ser um passo anterior antes de entrar no clube.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Em que linguagem são os projetos?<span class="faq-seta">+</span></button><div class="faq-resposta">Python é a linguagem principal, mas o foco é no raciocínio e na lógica — que valem para qualquer linguagem. Quem está aprendendo dados, automação ou lógica vai reconhecer o pensamento independentemente de onde está na jornada.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">E se eu não conseguir assistir ao vivo?<span class="faq-seta">+</span></button><div class="faq-resposta">Sem problema. Todas as lives ficam gravadas e disponíveis no Discord logo após o encontro. Você assiste quando puder, pratica no seu ritmo, e traz as dúvidas para a live de tira-dúvidas do mês.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Como funciona a votação dos projetos?<span class="faq-seta">+</span></button><div class="faq-resposta">No fim de cada mês, a Marcela apresenta duas opções de temática para o mês seguinte. As membras do clube votam no Discord e a maioria decide. É a sua assinatura moldando o clube.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Posso cancelar quando quiser?<span class="faq-seta">+</span></button><div class="faq-resposta">Sim. O clube é uma assinatura mensal recorrente — você cancela quando quiser, sem burocracia, diretamente pela Hotmart.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Por que Discord e não WhatsApp?<span class="faq-seta">+</span></button><div class="faq-resposta">Porque comunidades de tecnologia vivem no Discord — e aprender a usar o Discord faz parte da sua transição de carreira. Tem canais organizados por tema, histórico permanente e funciona muito melhor para uma comunidade tech ativa.</div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
 <section id="cta-final">
   <div class="secao-label">pronta?</div>
-  <h2 class="secao-titulo" style="max-width: 600px; margin: 0 auto;">Toda semana,<br>uma hora de código <em>real.</em></h2>
+  <h2 class="secao-titulo" style="max-width:600px;margin:0 auto;">Toda semana,<br>uma hora de código <em>real.</em></h2>
   <p class="secao-sub">Projetos que você vota, curadoria que vai além da live, e uma comunidade de mulheres na mesma jornada.</p>
   <div>
     <div class="cta-preco-box">
       <div class="cta-preco-num">R$97</div>
-      <div class="cta-preco-det">
-        por mês<br>
-        PIX · cartão · cancela quando quiser
-      </div>
+      <div class="cta-preco-det">por mês<br>PIX · cartão · cancela quando quiser</div>
     </div>
   </div>
-  <div>
-    <a href="LINK_HOTMART" class="btn-cta-final">Entrar no Clube do Código →</a>
-  </div>
-  <p style="font-size: 12px; color: rgba(245,240,232,0.4); margin-top: 1.5rem;">Zoom · Discord · Gravações disponíveis</p>
+  <div><a href="LINK_HOTMART" class="btn-cta-final">Entrar no Clube do Código →</a></div>
+  <p style="font-size:12px;color:rgba(245,240,232,0.4);margin-top:1.5rem;">Zoom · Discord · Gravações disponíveis</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div style="font-family: 'Fraunces', serif; font-size: 14px;">clube do código · Marcela dos Santos</div>
+  <div style="font-family:'Fraunces',serif;font-size:14px;">clube do código · Marcela dos Santos</div>
   <div class="footer-links">
     <a href="https://www.instagram.com/marceladossantos.prof/" target="_blank">Instagram</a>
     <a href="https://www.youtube.com/MarcelaDosSantos" target="_blank">YouTube</a>
-    <!--<a href="https://mgdossantos.github.io/tutoriaPython-LP/" target="_blank">Python Básico</a>
-    <a href="https://mgdossantos.github.io/pythonParaAnaliseDeDados/" target="_blank">Análise de Dados</a>-->
   </div>
 </footer>
 
@@ -741,8 +511,6 @@ function toggleFaq(btn) {
   document.querySelectorAll('.faq-item.aberto').forEach(i => i.classList.remove('aberto'));
   if (!isOpen) item.classList.add('aberto');
 }
-
-// Fade on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -751,7 +519,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.pq-card, .semana-card, .dep-card, .cur-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(16px)';
@@ -759,6 +526,5 @@ document.querySelectorAll('.pq-card, .semana-card, .dep-card, .cur-card').forEac
   observer.observe(el);
 });
 </script>
-
 </body>
 </html>
